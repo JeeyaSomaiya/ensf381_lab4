@@ -18,6 +18,7 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
+	<link rel="stylesheet" href="menu.css">
 
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
@@ -43,40 +44,97 @@ Description : Responsive Layouts.
 		img { max-width: 100%; height: auto; }
         .container { width: 100%;}
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }        
-        .main { padding: 15px; margin-left: 150px;}		
+        .main { padding: 15px;}		
         .footer { position: fixed; bottom: 0; width: 100%;}
         .news-item { padding: 10px; }
 		
 		.row { 
-			/*I need some CSS codes.*/		
+			/*I need some CSS codes.*/	
+			margin-bottom: 20px; /* Add space between rows */
+			display: block;
+            box-sizing: border-box;
+			
 		}
 
 		.large, .medium, .small {
 			/*I need some CSS codes.*/
+			box-sizing: border-box;
+			float:left;
 		}
 		
 		.gap {
+			min-height: calc(100vh - 180px);
 			/*I need some CSS codes.*/
 		}
 
 		@media screen and (min-width: 769px) {			
 			.large { 
+				width: 100%;
+				height: auto;
+				float: none;
 				/*I need some CSS codes.*/
 			}
 			.medium { 
+				width: 70%;
+				height: auto;
 				/*I need some CSS codes.*/
 			}
 			.small { 
+				width: 30%;
+				height: auto;
 				/*I need some CSS codes.*/
 			 }
 		}
 
         @media screen and (max-width: 768px) {
             /*I need some CSS codes.*/
+			.large {
+				width: 100%;
+				height: auto;
+			}
+			.medium {
+				width: 60%;
+				height: auto;
+			}
+			.small {
+				width: 40%;
+				height: auto;
+			}
+			.menu {
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+			}
+			.main {
+				width: 100%;
+			}
         }
 
         @media screen and (max-width: 480px) {
 			/*I need some CSS codes.*/
+			.large {
+				width: 100%;
+				height: auto;
+			}
+			.medium {
+				width: 100%;
+				height: auto;
+			}
+			.small {
+				width: 100%;
+				height: auto;
+			}
+			h1 {
+				font-size: 18px;
+			}
+			.menu {
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+			}
+			.main {
+				width: auto;
+			}			
         }
 
         
@@ -93,7 +151,7 @@ Description : Responsive Layouts.
 				<li><a href="#">Contact</a></li>
 			</ul>
         </div>
-        <div class="main">
+        <div class="main" >
 			<div class="row">
 				<!-- Large news item -->
 				<div class="large news-item">
@@ -135,7 +193,7 @@ Description : Responsive Layouts.
 				<!-- Medium news item -->
 				<div class="medium news-item">
 					<header>
-						<h1>Mahdi Ansari Takes a Historic Spacewalk Near the ISS</h1>
+						<h1>Kosy Onyejemezi Takes a Historic Spacewalk Near the ISS</h1>
 					</header>
 					<img src="images/medium.jpg" alt="Medium Image">
 					<article>
